@@ -1,0 +1,5 @@
+smali
+bs4
+lxml
+pandas
+-U scikit-learn

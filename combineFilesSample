@@ -1,0 +1,14 @@
+import pandas as pd
+import filepaths
+import numpy as np
+
+def main(fileLabel):
+
+
+  permData = pd.read_csv(filepaths.appPermissionsFileSample)
+  apiData = pd.read_csv(filepaths.apicallsSample)
+  
+  combinedData = pd.merge(permData,apiData,how = 'right',on = ['name'])
+  combinedData = combinedData.set_index('name')
+  
+  combinedData.to_csv(filepaths.newApp, na_rep= 0)

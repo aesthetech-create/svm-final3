@@ -1,0 +1,59 @@
+When you have the file you automatically download apktool, you just have to finish setting up the connection so it can run
+Main thing is make sure your PATH for apktool files (.bat and .jar) is correct on your laptop set up (if it’s not there add it
+
+
+run in terminal: cd APKTOOL
+Place all NEW APK files in apkGooglePlayFiles to be processed
+run in terminal:  javac decompileAPK.java
+run in terminal:  java decompileAPK.java
+
+Output will be folders with the same name as the file in APKTOOL folder
+
+
+
+
+
+
+Parsing Files
+
+BEFORE RUNNING
+on line 24
+Change fileLabel= False for begign apk
+ 
+ OR
+
+fileLabel= True for malicious apk
+
+
+MUST RUN MAIN TWICE before tfidf and combinations
+
+One for FALSE
+
+REMOVE ALL BEGIGN APKS OUT OF APKTOOL FOLDER before running next boolean
+
+One for TRUE
+
+After doing both malicious and begign process run getcleaned.py
+
+______________________________________
+SUMMARY/Steps
+APK tool- decompile begnign
+
+IN main.py
+on line 22
+Change fileLabel= False for begign apk
+Run main.py
+
+REMOVE all begign apk files out of folder
+
+APK tool- decompile malicious
+
+IN main.py
+on line 22
+Change fileLabel= True for malicious apk
+Run main.py
+
+Run getCleaned.py
+
+Use cleanedDataFrame.csv for model
+______________________________________________
